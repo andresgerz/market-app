@@ -27,14 +27,15 @@ app.innerHTML = `
     <div class='container'>
       <h1 class='text-center p-5'>Nuestros Productos</h1>
       <div class='container d-flex flex-wrap justify-content-center  products-wrapper'>
-      ${products.map((product, index) => `<div>
-      <img class='img-fluid' src='../../images/300x300.png' />
-      <div class='info'>
-        <h4>${product.brand} ${product.model}</h4>
-        <p>$ ${product.cost}</p>
-        <button class='btn btn-primary buttons' value='${product.cost}' onclick='addToCart();'>Add to cart</button> 
-      </div>
-      </div>`
+      ${products.map((product, index) => `
+        <div class='product'>
+          <img class='img-fluid' src='../../images/300x300.png' />
+          <div class='info'>
+            <h4>${product.brand} ${product.model}</h4>
+            <p>$ ${product.cost}</p>
+            <button class='btn btn-primary buttons' value='${product.cost}' onclick='addToCart();'>Add to cart</button> 
+          </div>
+        </div>`
         )}</div>
     </div>
   </section>
