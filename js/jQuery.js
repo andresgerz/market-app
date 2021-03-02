@@ -16,10 +16,12 @@ $(".sacar").click(function (){
   alert('¿Seguro que quiere sacar este producto?');
   
   const deleteItemArray = () => {
-    let arr = JSON.parse(localStorage.getItem("total"));
+    let allItems = JSON.parse(localStorage.getItem("todo"));
+    let arr = JSON.parse(localStorage.getItem("compras"));
+    console.log($(this).val());
     arr.splice($(this).val(), 1);
-    localStorage.clear();
-    localStorage.setItem("total", JSON.stringify(arr));
+    localStorage.removeItem("compras");
+    localStorage.setItem("compras", JSON.stringify(arr));
   }
   
   deleteItemArray();
