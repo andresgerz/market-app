@@ -1,4 +1,4 @@
-import { ACCESS_TOKEN_ENV } from '../../env.js';
+require('dotenv').config();
 
 let carritoDeCompras = localStorage.getItem("compras") === null ? [] : JSON.parse(localStorage.getItem("compras"));
 
@@ -63,7 +63,7 @@ if (localStorage.getItem("todo") === null) {
     type: 'get',
     headers: {
       'content-type': 'application/json',   
-      'Authorization': `Bearer ${ACCESS_TOKEN_ENV}`
+      'Authorization': `Bearer ${process.env.ACCESS_TOKEN_ENV}`
     },
     success: function (data) {
         
