@@ -63,7 +63,7 @@ if (localStorage.getItem("todo") === null) {
     type: 'get',
     headers: {
       'content-type': 'application/json',   
-      'Authorization': `Bearer ${process.env.ACCESS_TOKEN_ENV}`
+      'Authorization': `Bearer ${ACCESS_TOKEN_ENV}`
     },
     success: function (data) {
         
