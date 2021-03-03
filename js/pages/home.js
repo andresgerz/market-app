@@ -1,4 +1,6 @@
-require('dotenv').config();
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 let carritoDeCompras = localStorage.getItem("compras") === null ? [] : JSON.parse(localStorage.getItem("compras"));
 
