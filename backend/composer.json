@@ -1,0 +1,16 @@
+{
+    "name": "andres/backend",
+    "description": "E-commerce web app.",
+    "type": "project",
+    "require": {
+        "vlucas/phpdotenv": "5.3.x-dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrés",
+            "email": "andres.gerz@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
