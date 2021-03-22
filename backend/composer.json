@@ -1,6 +1,6 @@
 {
-    "name": "andres/backend",
-    "description": "E-commerce web app.",
+    "name": "www-data/backend",
+    "description": "E-commerce web app",
     "type": "project",
     "require": {
         "vlucas/phpdotenv": "5.3.x-dev"

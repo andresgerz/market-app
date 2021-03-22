@@ -1,0 +1,4 @@
+name: market-app
+recipe: lemp
+config:
+  webroot: .

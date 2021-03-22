@@ -1,5 +1,7 @@
 <?php
 
+require_once('./backend/database/database.php');
+
 class Product {
   private $db;
 
