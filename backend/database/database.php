@@ -12,7 +12,8 @@ class Database {
   private $db_host;
   private $db_user;
   private $db_name;
-
+  private $statement;
+  private $db;
 
   public function __construct() {
     $this->db_password = $_ENV['DB_PASSWORD'];
@@ -25,17 +26,22 @@ class Database {
   public function Connect() {
 
     try {
-      $connection_db = new PDO('mysql:host=' . $this->db_host . ';dbname=' . $this->db_name, $this->db_user, $this->db_password);
+      $db = new PDO('mysql:host=' . $this->db_host . ';dbname=' . $this->db_name, $this->db_user, $this->db_password);
       
-      $connection_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-      $connection_db->exec("SET CHARACTER SET UTF8");
+      $db->exec("SET CHARACTER SET UTF8");
 
     } catch (Exception $e) {
       die ("Error" . $e->getMessage());
 
       echo "Error line:" . $e->getLine();
     }
-    return $connection_db;
+    return $db;
+    
+  }
+
+  public function query($sql) {
+    $this->statement = $this->db->prepare($sql);
   }
 }
