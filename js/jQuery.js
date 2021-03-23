@@ -3,6 +3,16 @@ $(document).ready(function (){
     "backgroundColor": "red",
     "color": "#fff",
   });
+
+  let products = JSON.parse(localStorage.getItem("compras"));
+  let todo = JSON.parse(localStorage.getItem("todo"));
+  let acum = 0;
+
+  products.forEach(element => {
+    acum += todo[element].price;
+  });
+
+  $(".total-compras").text(`Total: $ ${acum}`);
 });
 
 $(".buttons").click(function (){ 
@@ -26,4 +36,25 @@ $(".sacar").click(function (){
   
   deleteItemArray();
   location.reload();
+})
+
+
+$(".comprar").click(function (){ 
+  let products = JSON.parse(localStorage.getItem("compras"));
+
+  $.ajax({
+    url: '../backend/action/products.php',
+    type: 'post',
+    headers: {
+      'content-type': 'application/json',    
+    },
+    data: {products},
+    success: function (data) {
+      console.log(data);  
+    },
+    error: function(xhr, status, error){
+      var errorMessage = xhr.status + ': ' + xhr.statusText
+      alert('Error - ' + errorMessage);
+    }
+  });
 })

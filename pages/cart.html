@@ -44,17 +44,29 @@
   <main id="carrito-wrapper">
     <div class="container p-4">
       <h1 class="text-center display-4 m-5">Mis Compras</h1>
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Producto</th>
-            <th scope="col">Precio</th>
-          </tr>
-        </thead>
-        <tbody id="cart-products">
-        </tbody>
-      </table>
+      <div class="container">
+        <div class="row">
+          <div class="col-9">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Precio</th>
+                </tr>
+              </thead>
+              <tbody id="cart-products">
+              </tbody>
+            </table>
+          </div>
+          <div class="col-3">
+            <h2 class="total-compras font-weight-bold"></h2>
+            <form>
+              <button type="submit" class=".comprar">Comprar</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
   <footer class="bg-primary text-white d-flex justify-content-center align-items-center">
