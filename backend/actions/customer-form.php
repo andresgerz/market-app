@@ -1,5 +1,4 @@
 <?php
-require_once('../controllers/ProductController.php'); 
 
 $data_form = array(
   'name' => $_POST['name-name'],

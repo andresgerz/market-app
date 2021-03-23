@@ -43,7 +43,7 @@ $(".comprar").click(function (){
   let products = JSON.parse(localStorage.getItem("compras"));
 
   $.ajax({
-    url: '../backend/action/products.php',
+    url: '../backend/actions/product-form.php',
     type: 'post',
     headers: {
       'content-type': 'application/json',    
