@@ -7,7 +7,7 @@ class ProductModel {
   private $products;
   
   public function __construct() {
-    require_once('../database/db.php');
+    require_once('database/db.php');
     $this->db = (new Database())->connect();
     $this->products = array();
   }
