@@ -23,7 +23,7 @@ class Database {
   }
 
 
-  public function Connect() {
+  public function connect() {
 
     try {
       $db = new PDO('mysql:host=' . $this->db_host . ';dbname=' . $this->db_name, $this->db_user, $this->db_password);
@@ -41,7 +41,4 @@ class Database {
     
   }
 
-  public function query($sql) {
-    $this->statement = $this->db->prepare($sql);
-  }
 }
