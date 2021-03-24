@@ -25,11 +25,21 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./pages/products.html">Products</a>
-            </li>
+            </li> 
             <li class="nav-item">
               <a class="nav-link" href="./pages/contact.html" tabindex="-1" aria-disabled="true">Contact</a>
             </li>
           </ul>
+        </div>
+        <div class="mr-5 ml-5">
+          <form action="./backend/actions/login.php" method="post">
+            <label for="email-name">Email</label>
+            <input type="email" name="email-name" id="email-id">
+            <label for="password-name">Password</label>
+            <input type="password" name="password-name" id="password-id">
+            <button type="submit" class="btn btn-primary">Login</button>
+            <a href="./pages/signUp.html">Sign Up</a>
+          </form>
         </div>
         <div>
           <p>
