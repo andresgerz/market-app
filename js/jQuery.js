@@ -58,3 +58,19 @@ $(".comprar").click(function (){
     }
   });
 })
+
+
+/* 
+// AJAX
+$('#login').submit(e => {
+  console.log(e);
+  e.preventDefault();
+
+  const name = $('#number_convert_id').val();
+  console.log(name);
+
+  $.post("https://market-app.lndo.site/backend/actions/login.php", {postData: name}, (response) => {
+    
+    $('#form-convert').trigger('reset');
+  });
+});  */

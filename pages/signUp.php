@@ -18,7 +18,7 @@
           <a class="navbar-brand mr-5" href="#">Market App</a>
           <ul class="navbar-nav mr-auto mt-2 ml-5 mt-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="https://market-app.lndo.site">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="products.html">Products</a>

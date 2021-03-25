@@ -45,18 +45,13 @@ class CustomerModel {
     }
   }
 
-
+  public function getCustomers($data) {
+    $query = 'SELECT * FROM customers';
+    $stmt = $this->db->prepare($query);
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $stmt->bindParam(':email', $data);
+    $stmt->execute();
+    
+    return $stmt->fetch();
+  }
 }
-
-/* 
-`name` VARCHAR(100) NOT NULL,
-  `surname` VARCHAR(100) NOT NULL,
-  `email` VARCHAR(100) NOT NULL,
-  `country` VARCHAR(100) NOT NULL,
-  `state` VARCHAR(100) NOT NULL,
-  `city` VARCHAR(100) NOT NULL,
-  `address` VARCHAR(100) NOT NULL,
-  `floor` INT(4) NOT NULL,
-  `dept` VARCHAR(50) NOT NULL,
-  `card` VARCHAR(100) NOT NULL,
-  `nro_card` VARCHAR(16) NOT NULL, */

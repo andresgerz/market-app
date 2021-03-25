@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+  <?php require './backend/partials/header.php'?>
   <header>
     <div class="container-fluid navbar-wrapper">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -32,13 +33,13 @@
           </ul>
         </div>
         <div class="mr-5 ml-5">
-          <form action="./backend/actions/login.php" method="post">
+          <form id="login" action="https://market-app.lndo.site/backend/actions/login.php" method="post">
             <label for="email-name">Email</label>
             <input type="email" name="email-name" id="email-id">
             <label for="password-name">Password</label>
             <input type="password" name="password-name" id="password-id">
             <button type="submit" class="btn btn-primary">Login</button>
-            <a href="./pages/signUp.html">Sign Up</a>
+            <a href="./pages/signUp.php">Sign Up</a>
           </form>
         </div>
         <div>

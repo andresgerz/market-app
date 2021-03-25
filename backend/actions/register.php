@@ -1,5 +1,6 @@
 <?php 
 
+session_start();
 require_once('../models/CustomerModel.php');
 
 $data_form = array(
@@ -23,8 +24,13 @@ print_r($data_form);
 echo '</pre>';
 
 
-if (!empty($data_form['email']) && !empty($data_form['password'])) {
-  echo '<pre>here</pre>';
+if (!empty($data_form['email']) && !empty($data_form['password']) && ($data_form['password'] === $data_form['password2'])) {
+  echo 'verification';
   $customer = new CustomerModel();
   $customer->add($data_form);
+
+  /* $_SESSION['customer_id'] = $data_form['email'];
+  header('Location: /index.html'); */
+} else {
+  $message = 'Incomplete form!';
 }
