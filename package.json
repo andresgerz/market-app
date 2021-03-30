@@ -2,25 +2,28 @@
   "name": "market-app",
   "version": "1.0.0",
   "description": "Vanilla JS web app",
-  "main": "index.html",
+  "main": "public/pages/home.html",
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "parcel-bundler": "^1.12.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.0",
-    "parcel-bundler": "^1.6.1"
+    "typescript": "^4.2.3"
   },
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html --target node"
+    "start": "parcel public/pages/home.html --open",
+    "build": "parcel build public/pages/home.html --target node"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/andresgerz/market-app.git"
   },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  },
   "keywords": [
     "javascript",
-    "starter"
+    "typescript"
   ],
   "author": "andresgerz",
   "license": "ISC",
