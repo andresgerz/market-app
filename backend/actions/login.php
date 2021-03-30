@@ -26,7 +26,7 @@ if (!empty($email) && !empty($password)) {
   if (($data_customer['password'] === $password) && $email === $data_customer['email']) {
     echo 'OK';
     $_SESSION['customer_id'] = $data_customer['id_customer'];
-    //header('Location: /login');
+    header('Location: https://market-app.lndo.site/');
   } else {
     echo 'NO';
     $message = 'Sorry, don\'t work login';
