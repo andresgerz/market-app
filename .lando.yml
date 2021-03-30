@@ -2,3 +2,4 @@ name: market-app
 recipe: lemp
 config:
   webroot: .
+  php: '7.4'

@@ -12,5 +12,10 @@
             "email": "andres.gerz@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "backend\\": "./"
+        }
+    },
     "minimum-stability": "dev"
 }
