@@ -1,7 +1,7 @@
 
 <h1>Contact us</h1>
-
-<form>
+<h3>Welcome <?php echo $name ?></h3>
+<form action="" method="post">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

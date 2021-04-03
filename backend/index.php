@@ -1,17 +1,17 @@
 <?php
 
 require_once __DIR__ . '/backend/vendor/autoload.php';
+
+use backend\controllers\SiteController;
 use backend\core\Application;
 
-$app = new Applicacion(dirname(__DIR__));
+$app = new Application(dirname(__DIR__));
 
-$app->route->get('/', 'home');
+$app->route->get('/', [SiteController::class, 'home']);
 
-$app->route->get('/contact', 'contact');
+$app->route->get('/contact', [SiteController::class, 'contact']);
 
-$app->route->post('/contact', function() {
-  return 'handle submit data';
-});
+$app->route->post('/contact', [SiteController::class, 'handleContact']);
 
 
 $app->run();
