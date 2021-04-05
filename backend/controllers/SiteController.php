@@ -24,7 +24,9 @@ class SiteController extends Controller {
     return $this->render('contact', $params);
   }
 
-  public function handleSubmit() {
+  public function handleContact(Request $request) {
+
+    $body = $request->getBody();
 
     return 'Handling data';
   }
